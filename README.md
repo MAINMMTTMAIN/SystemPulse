@@ -10,9 +10,6 @@ A lightweight system monitor built with Python that tracks CPU, RAM, battery, an
 - Weekly usage report export to PDF
 - List of top CPU-consuming processes
 
-## Demo
-(Add screenshot or short GIF here later – می‌تونی با ShareX یا OBS رکورد کنی)
-
 ## Requirements
 - Python 3.8+
 - See [requirements.txt](requirements.txt)
