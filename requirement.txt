@@ -1,0 +1,8 @@
+psutil
+matplotlib
+plotly
+plyer
+schedule
+pandas
+scikit-learn
+GPUtil
