@@ -32,4 +32,5 @@ Run the program for a while to collect enough logs.
 Feel free to open issues or submit pull requests!
 ## License
 MIT License – see LICENSE for details
+
 Made with ❤️ in Python
