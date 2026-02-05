@@ -20,19 +20,19 @@ def get_top_processes(top_n=5):
     return ', '.join([f"{name} ({cpu:.1f}%)" for name, cpu in procs[:top_n]])
 
 def optimize_interval(current_interval):
-    return max(30, current_interval)  # Increase to at least 30s on low battery
+    return max(30, current_interval)  
 
 def export_to_pdf(log_file, period='weekly'):
     df = pd.read_csv(log_file)
-    if len(df) < 10:  # حداقل ۱۰ داده برای جلوگیری از خالی بودن
+    if len(df) < 10:  
         raise ValueError("Not enough data to generate report. Run the app longer!")
     
     df['time'] = pd.to_datetime(df['time'])
-    df.set_index('time', inplace=True)  # برای resample بهتر
+    df.set_index('time', inplace=True)  
     
     if period == 'weekly':
         df_period = df.resample('W').mean(numeric_only=True)
-        if len(df_period) < 2:  # حداقل ۲ هفته برای plot معنی‌دار
+        if len(df_period) < 2:  
             raise ValueError("Not enough weeks of data. Collect data over multiple weeks!")
     
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -51,4 +51,5 @@ def export_to_pdf(log_file, period='weekly'):
     pdf_path = 'logs/weekly_report.pdf'
     fig.savefig(pdf_path, bbox_inches='tight')
     plt.close(fig)
+
     return pdf_path
