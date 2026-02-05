@@ -17,7 +17,7 @@ A lightweight system monitor built with Python that tracks CPU, RAM, battery, an
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SmartBatGuard.git
+git clone https://github.com/MAINMMTTMAIN/SmartBatGuard
 cd SmartBatGuard
 pip install -r requirements.txt
 python main.py
